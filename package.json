@@ -1,0 +1,41 @@
+{
+  "name": "react-database-diagram",
+  "version": "0.1.8",
+  "description": "A react component to render nice database diagram using storm-react-diagrams",
+  "main": "dist/main.js",
+  "repository": "git@github.com:agustin107/react-database-diagram.git",
+  "author": "Agustin N. R. Ramirez <agustin.n.r.ramirez@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "react-database-diagram",
+    "database-diagram",
+    "database-erd",
+    "react erd"
+  ],
+  "devDependencies": {
+    "@types/dagre": "^0.7.40",
+    "@types/enzyme": "^3.1.15",
+    "@types/enzyme-adapter-react-16": "^1.0.3",
+    "@types/lodash": "^4.14.116",
+    "@types/react": "^16.4.14",
+    "@types/react-dom": "^16.0.7",
+    "@types/shelljs": "^0.7.8",
+    "dagre": "^0.8.2",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-test-renderer": "^16.6.3",
+    "shelljs": "^0.8.1",
+    "storm-react-diagrams": "^5.2.1",
+    "typescript": "^3.1.6",
+    "ts-node": "^5.0.0"
+  },
+  "scripts": {
+    "build": "yarn clean && tsc && yarn copy-static-assets",
+    "clean": "rm -rf dist/",
+    "copy-static-assets": "ts-node -O '{\"module\": \"commonjs\"}' copyStaticAssets.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "yarn build"
+  }
+}
