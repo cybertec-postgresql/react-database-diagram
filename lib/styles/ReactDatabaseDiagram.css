@@ -1,0 +1,68 @@
+.react-database-diagram-canvas {
+  height: 100vh;
+}
+
+.react-database-diagram-node {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 200px;
+  height: auto;
+  border: 1px solid orange;
+  font-size: 12px;
+  background-color: white;
+}
+
+.react-database-diagram-node__title {
+  padding: 5px 0;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  border-bottom: 1px solid orange;
+  background-color: wheat;
+}
+
+.react-database-diagram-node__columns {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.react-database-diagram-node__column {
+  display: flex;
+  max-height: 25px;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.react-database-diagram-node__columnType--PK {
+  flex: 2;
+  padding: 5px;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.react-database-diagram-node__columnName--PK {
+  flex: 10;
+  padding: 5px;
+  border-bottom: 1px solid black;
+}
+
+.react-database-diagram-node__columnType {
+  flex: 2;
+  padding: 5px;
+  border-right: 1px solid black;
+}
+
+.react-database-diagram-node__columnName {
+  flex: 10;
+  padding: 5px;
+}
+
+.react-database-diagram-node__text--italic {
+  font-style: italic;
+}
+
+.react-database-diagram-node__text--bold {
+  font-weight: bold;
+}
