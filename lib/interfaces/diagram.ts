@@ -1,3 +1,12 @@
+export interface IDiagramProps {
+  allowLooseLinks?: boolean;
+  allowCanvasTranslation?: boolean;
+  allowCanvasZoom?: boolean;
+  inverseZoom?: boolean;
+  maxNumberPointsPerLink?: number;
+  smartRouting?: boolean;
+};
+
 interface IId {
   id: string;
 }

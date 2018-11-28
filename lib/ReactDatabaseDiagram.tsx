@@ -5,13 +5,12 @@ import * as _ from "lodash";
 import {
   DiagramEngine,
   DiagramModel,
-  DiagramProps,
   DiagramWidget,
   LinkModel,
 } from "storm-react-diagrams";
 import "storm-react-diagrams/dist/style.min.css";
 
-import { ISerializedDiagram } from "./interfaces/diagram";
+import { ISerializedDiagram, IDiagramProps } from "./interfaces/diagram";
 import { IDatabaseTable } from "./interfaces/table";
 
 import { ReactDatabaseDiagramLinkFactory } from "./diagram/factories/LinkFactory";
@@ -26,13 +25,28 @@ import "./styles/ReactDatabaseDiagram.css";
 
 interface IReactDatabaseDiagramProps {
   schema: IDatabaseTable[];
+  config?: IDiagramProps;
 }
 
+type ReactDatabasDiagramProps = IReactDatabaseDiagramProps 
+/**
+ * A react component to render nice database diagram using storm-react-diagrams
+ *
+ * @class ReactDatabaseDiagram
+ * @extends {React.Component<ReactDatabasDiagramProps>}
+ */
 class ReactDatabaseDiagram extends React.Component<
-  IReactDatabaseDiagramProps,
-  {}
+  ReactDatabasDiagramProps
 > {
-  public count: number = 0;
+
+  public static defaultProps = {
+    allowLooseLinks: false,
+    allowCanvasTranslation: true,
+    allowCanvasZoom: true,
+    maxNumberPointsPerLink: 0,
+    smartRouting: true,
+  }
+
   public engine: DiagramEngine;
   public model: DiagramModel;
   private sceneNodes: Map<string, ReactDatabaseDiagramNodeModel> = new Map<
@@ -96,13 +110,15 @@ class ReactDatabaseDiagram extends React.Component<
   };
 
   public updateDiagram() {
+    const { schema } = this.props;
+
     // Link each child node to its parent
-    _.each(this.props.schema, (table, index) => {
+    _.each(schema, (table, index) => {
       const parentPort = this.addToScene(table, index)!.getPort("bottom");
 
       _.each(table.foreign_keys, (tableName, indexChild) => {
-        const foreignTable = this.props.schema[
-          _.findIndex(this.props.schema, { table_name: tableName.toTable })
+        const foreignTable = schema[
+          _.findIndex(schema, { table_name: tableName.toTable })
         ];
 
         const childPort = this.addToScene(
@@ -133,17 +149,10 @@ class ReactDatabaseDiagram extends React.Component<
   };
 
   public render() {
-    const props = {
-      diagramEngine: this.engine,
-      allowLooseLinks: false,
-      allowCanvasTranslation: true,
-      allowCanvasZoom: true,
-      maxNumberPointsPerLink: 0,
-      smartRouting: true,
-    } as DiagramProps;
+    const { config } = this.props;
 
     return (
-      <DiagramWidget className="react-database-diagram-canvas" {...props} />
+      <DiagramWidget className="react-database-diagram-canvas" {...config} diagramEngine={this.engine} />
     );
   }
 }

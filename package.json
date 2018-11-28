@@ -1,6 +1,6 @@
 {
   "name": "react-database-diagram",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "A react component to render nice database diagram using storm-react-diagrams",
   "main": "dist/main.js",
   "repository": "git@github.com:agustin107/react-database-diagram.git",

@@ -5,7 +5,7 @@ A react component to render nice database diagram using storm-react-diagrams
 ![A diagram rendered by storm-react-diagram](example.png)
 
 # Usage
-```
+```javascript
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
