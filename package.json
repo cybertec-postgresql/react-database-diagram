@@ -1,6 +1,6 @@
 {
   "name": "react-database-diagram",
-  "version": "0.1.9",
+  "version": "0.1.11",
   "description": "A react component to render nice database diagram using storm-react-diagrams",
   "main": "dist/main.js",
   "repository": "git@github.com:agustin107/react-database-diagram.git",
@@ -12,6 +12,9 @@
     "database-erd",
     "react erd"
   ],
+  "dependencies": {
+    "storm-react-diagrams": "^5.2.1"
+  },
   "devDependencies": {
     "@types/dagre": "^0.7.40",
     "@types/enzyme": "^3.1.15",
@@ -27,7 +30,6 @@
     "react-dom": "^16.6.3",
     "react-test-renderer": "^16.6.3",
     "shelljs": "^0.8.1",
-    "storm-react-diagrams": "^5.2.1",
     "typescript": "^3.1.6",
     "ts-node": "^5.0.0"
   },
