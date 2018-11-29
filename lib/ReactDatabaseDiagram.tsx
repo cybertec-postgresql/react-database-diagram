@@ -159,7 +159,6 @@ class ReactDatabaseDiagram extends React.Component<
     }
 
     return (<div>Schema has no tables</div>)
-
   }
 }
 
