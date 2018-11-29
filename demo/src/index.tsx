@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-import DatabaseDiagram, { IDatabaseTable } from "react-database-diagram";
+import DatabaseDiagram, { IDatabaseTable } from "@cybertec/react-database-diagram";
 
 const schema = [
   {

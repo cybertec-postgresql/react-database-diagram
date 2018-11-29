@@ -5,6 +5,12 @@ import { DefaultLinkFactory, DefaultLinkWidget } from "storm-react-diagrams";
 import { ReactDatabaseDiagramLinkModel } from "../models/LinkModel";
 import { ReactDatabaseDiagramLinkWidget } from "../widgets/LinkWidget";
 
+/**
+ * Diagram Link Factory
+ *
+ * @class ReactDatabaseDiagramLinkFactory
+ * @extends {DefaultLinkFactory}
+ */
 export class ReactDatabaseDiagramLinkFactory extends DefaultLinkFactory {
   constructor() {
     super();

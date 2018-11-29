@@ -26,6 +26,12 @@ export interface IReactDatabaseDiagramWidgetState {
   restColumns: IColumn[];
 }
 
+/**
+ * Diagram Node Widget
+ *
+ * @class ReactDatabaseDiagramNodeWidget
+ * @extends {BaseWidget<IReactDatabaseDiagramNodeWidgetProps, IReactDatabaseDiagramWidgetState>}
+ */
 export class ReactDatabaseDiagramNodeWidget extends BaseWidget<
   IReactDatabaseDiagramNodeWidgetProps,
   IReactDatabaseDiagramWidgetState

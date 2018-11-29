@@ -27,6 +27,13 @@ const size = {
   height: 200,
 };
 
+/**
+ * Distribute elements of Diagram model to organize
+ * properly
+ *
+ * @param model
+ * @returns distributedModel
+ */
 export const distributeElements = (model: ISerializedDiagram) => {
   const clonedModel = _.cloneDeep(model);
   const nodes = distributeGraph(clonedModel);
@@ -42,6 +49,12 @@ export const distributeElements = (model: ISerializedDiagram) => {
   return clonedModel;
 };
 
+/**
+ *
+ *
+ * @param {ISerializedDiagram} model
+ * @returns graphNodes
+ */
 const distributeGraph = (model: ISerializedDiagram) => {
   const nodes = mapElements(model);
   const edges = mapEdges(model);
@@ -75,6 +88,12 @@ const mapElements = (model: ISerializedDiagram): IMapElement[] => {
   }));
 };
 
+/**
+ *
+ *
+ * @param {ISerializedDiagram} model
+ * @returns {IMapEdge[]}
+ */
 const mapEdges = (model: ISerializedDiagram): IMapEdge[] => {
   // returns links which connects nodes
   // we check are there both from and to nodes in the model. Sometimes links can be detached

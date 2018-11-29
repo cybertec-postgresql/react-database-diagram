@@ -6,6 +6,12 @@ import { IDatabaseTable } from "../../interfaces/table";
 
 import { ReactDatabaseDiagramPortModel } from "./PortModel";
 
+/**
+ * Diagram Node Model
+ *
+ * @class ReactDatabaseDiagramNodeModel
+ * @extends {NodeModel}
+ */
 export class ReactDatabaseDiagramNodeModel extends NodeModel {
   public ports: {
     [s: string]: ReactDatabaseDiagramPortModel;

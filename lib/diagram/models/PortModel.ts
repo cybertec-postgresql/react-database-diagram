@@ -4,6 +4,12 @@ import { DiagramEngine, LinkModel, PortModel } from "storm-react-diagrams";
 
 import { ReactDatabaseDiagramLinkModel } from "./LinkModel";
 
+/**
+ * Diagram Port Model
+ *
+ * @class ReactDatabaseDiagramPortModel
+ * @extends {PortModel}
+ */
 export class ReactDatabaseDiagramPortModel extends PortModel {
   public in: boolean;
   public label: string;

@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "react": "^16.3.2",
-    "react-database-diagram": "^0.1.8",
+    "@cybertec/react-database-diagram": "^0.1.1",
     "react-dom": "^16.3.2"
   }
 }
