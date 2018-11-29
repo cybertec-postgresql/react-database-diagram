@@ -1,6 +1,6 @@
 {
-  "name": "react-database-diagram",
-  "version": "0.1.11",
+  "name": "@cybertec/react-database-diagram",
+  "version": "0.1.0",
   "description": "A react component to render nice database diagram using storm-react-diagrams",
   "main": "dist/main.js",
   "repository": "git@github.com:agustin107/react-database-diagram.git",
@@ -13,7 +13,8 @@
     "react erd"
   ],
   "dependencies": {
-    "storm-react-diagrams": "^5.2.1"
+    "storm-react-diagrams": "^5.2.1",
+    "dagre": "^0.8.2"
   },
   "devDependencies": {
     "@types/dagre": "^0.7.40",
@@ -23,7 +24,6 @@
     "@types/react": "^16.4.14",
     "@types/react-dom": "^16.0.7",
     "@types/shelljs": "^0.7.8",
-    "dagre": "^0.8.2",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "react": "^16.6.3",

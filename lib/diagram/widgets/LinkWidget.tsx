@@ -4,12 +4,20 @@ import { DefaultLinkWidget } from "storm-react-diagrams";
 
 import { ReactDatabaseDiagramLinkModel } from "../models/LinkModel";
 
-export class ReactDatabaseDiagramLinkWidget extends React.Component<{
+interface IReactDatabaseDiagramLinkWidgetProps {
   model: ReactDatabaseDiagramLinkModel;
   path: string;
   selected: boolean;
   defaultWidget: DefaultLinkWidget;
-}> {
+}
+
+/**
+ * Diagram Link Widget
+ *
+ * @class ReactDatabaseDiagramLinkWidget
+ * @extends {React.Component<IReactDatabaseDiagramLinkWidgetProps>}
+ */
+export class ReactDatabaseDiagramLinkWidget extends React.Component<IReactDatabaseDiagramLinkWidgetProps> {
   public path: SVGPathElement;
   public circle: SVGCircleElement;
   public callback: () => any;

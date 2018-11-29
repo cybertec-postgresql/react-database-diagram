@@ -28,7 +28,8 @@ interface IReactDatabaseDiagramProps {
   config?: IDiagramProps;
 }
 
-type ReactDatabasDiagramProps = IReactDatabaseDiagramProps 
+type ReactDatabasDiagramProps = IReactDatabaseDiagramProps;
+
 /**
  * A react component to render nice database diagram using storm-react-diagrams
  *
@@ -149,11 +150,16 @@ class ReactDatabaseDiagram extends React.Component<
   };
 
   public render() {
-    const { config } = this.props;
+    const { config, schema } = this.props;
 
-    return (
-      <DiagramWidget className="react-database-diagram-canvas" {...config} diagramEngine={this.engine} />
-    );
+    if (schema.length) {
+      return (
+        <DiagramWidget className="react-database-diagram-canvas" {...config} diagramEngine={this.engine} />
+      );
+    }
+
+    return (<div>Schema has no tables</div>)
+
   }
 }
 
