@@ -11,8 +11,8 @@
   resolved "https://registry.npmjs.org/@types/dagre/-/dagre-0.7.40.tgz#7112c8bb912d131482825dc9cc2a522073efbe05"
 
 "@types/enzyme-adapter-react-16@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@types/enzyme-adapter-react-16/-/enzyme-adapter-react-16-1.0.3.tgz#0cf7025b036694ca8d596fe38f24162e7117acf1"
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@types/enzyme-adapter-react-16/-/enzyme-adapter-react-16-1.0.5.tgz#1bf30a166f49be69eeda4b81e3f24113c8b4e9d5"
   dependencies:
     "@types/enzyme" "*"
 
