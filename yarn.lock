@@ -800,8 +800,8 @@ ts-node@^8.4.1:
     yn "^3.0.0"
 
 typescript@^3.1.6:
-  version "3.6.4"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.6.4.tgz#b18752bb3792bc1a0281335f7f6ebf1bbfc5b91d"
+  version "3.8.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.8.2.tgz#91d6868aaead7da74f493c553aeff76c0c0b1d5a"
 
 underscore@~1.4.4:
   version "1.4.4"
