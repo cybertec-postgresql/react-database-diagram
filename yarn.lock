@@ -65,8 +65,8 @@
     csstype "^2.2.0"
 
 "@types/shelljs@^0.8.5":
-  version "0.8.5"
-  resolved "https://registry.yarnpkg.com/@types/shelljs/-/shelljs-0.8.5.tgz#1e507b2f6d1f893269bd3e851ec24419ef9beeea"
+  version "0.8.7"
+  resolved "https://registry.yarnpkg.com/@types/shelljs/-/shelljs-0.8.7.tgz#a2a606b185165abadf8b7995fea5e326e637088e"
   dependencies:
     "@types/glob" "*"
     "@types/node" "*"
