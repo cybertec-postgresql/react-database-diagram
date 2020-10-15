@@ -675,8 +675,8 @@ react-test-renderer@^16.0.0-0, react-test-renderer@^16.6.3:
     scheduler "^0.17.0"
 
 react@^16.3.2, react@^16.6.3:
-  version "16.11.0"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.11.0.tgz#d294545fe62299ccee83363599bf904e4a07fdbb"
+  version "16.14.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.14.0.tgz#94d776ddd0aaa37da3eda8fc5b6b18a4c9a3114d"
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
